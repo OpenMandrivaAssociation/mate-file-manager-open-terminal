@@ -1,11 +1,11 @@
 Summary:	Caja extension for an open terminal shortcut
 Name:		mate-file-manager-open-terminal
-Version:	1.2.0
+Version:	1.4.0
 Release:	1
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 URL:		http://pub.mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.2/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
 BuildRequires:	mate-common
@@ -15,7 +15,7 @@ BuildRequires:	pkgconfig(mateconf-2.0)
 BuildRequires:	pkgconfig(mate-desktop-2.0)
 
 Requires:	mate-conf
-Provides:	caja-open-terminal = %{release}-%{version}
+Provides:	caja-open-terminal = %{EVRD}
 
 %description
 The caja-open-terminal extension provides a right-click "Open
@@ -40,4 +40,11 @@ NOCONFIGURE=1 ./autogen.sh
 %doc AUTHORS ChangeLog COPYING NEWS TODO
 %{_sysconfdir}/mateconf/schemas/*
 %{_libdir}/caja/extensions-2.0/*.so*
+
+
+
+%changelog
+* Thu Jun 07 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.0-1
++ Revision: 803046
+- imported package mate-file-manager-open-terminal
 
